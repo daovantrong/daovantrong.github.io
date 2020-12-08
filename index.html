@@ -1,19 +1,7 @@
 
 <!DOCTYPE html><html class=''>
-<head><meta charset='UTF-8'><title>Trong.CF</title>
-<link rel='stylesheet prefetch' href='//codepen.io/assets/reset/normalize.css'>
-<script src='//codepen.io/assets/libs/prefixfree.min.js'></script>
-<meta http-equiv="refresh" content="5;URL=http://www.trong.cf/" />
-<script type="text/JavaScript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-35893324-1', 'auto');
-  ga('send', 'pageview');
-
-</script> 
+<head><meta charset='UTF-8'><title>Trong.LIVE</title>
+<meta http-equiv="refresh" content="2;URL=http://www.trong.live/" />
 <style class="cp-pen-styles">@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 body {
@@ -216,6 +204,13 @@ h1 {
 </div>
 <h1>Redirecting</h1>
 
-<script src='//codepen.io/assets/editor/live/css_live_reload_init.js'></script>
-<script src='http://assets.trong.cf/js/no-iframe.js'></script>
+<script>
+var CSSReload={head:null,init:function(){this._storeHead(),this._listenToPostMessages()},_storeHead:function(){this.head=document.head||document.getElementsByTagName("head")[0]},_listenToPostMessages:function(){var e=this;window[this._eventMethod()](this._messageEvent(),function(t){try{var s=JSON.parse(t.data);"string"==typeof s.css&&e._refreshCSS(s)}catch(n){}},!1)},_messageEvent:function(){return"attachEvent"===this._eventMethod()?"onmessage":"message"},_eventMethod:function(){return window.addEventListener?"addEventListener":"attachEvent"},_refreshCSS:function(e){var t=this._findPrevCPStyle(),s=document.createElement("style");s.type="text/css",s.className="cp-pen-styles",s.styleSheet?s.styleSheet.cssText=e.css:s.appendChild(document.createTextNode(e.css)),this.head.appendChild(s),t&&t.parentNode.removeChild(t),"prefixfree"===e.css_prefix&&StyleFix.process()},_findPrevCPStyle:function(){for(var e=document.getElementsByTagName("style"),t=e.length-1;t>=0;t--)if("cp-pen-styles"===e[t].className)return e[t];return!1}};CSSReload.init();// JavaScript Document
+</script>
+<script>
+// if the location of the top (topmost browser window) not equal to the current location then it redirects to the URL of the current window (iframe)
+if (window.top.location != document.location) {
+    window.top.location.href = document.location.href;
+}
+</script>
 </body></html>
